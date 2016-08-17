@@ -29,11 +29,11 @@ public class FeatureToggle {
 
 	       		if (showFeature) {
 	       		  System.out.println("Showing your feature");
-	       		  message.setMessage("Java Spark Activado Feature Toggle");
+	       		  message.setMessage("Java Spark Activado Feature Toggle Agile");
 	       	      
 	       		} else {
 	       		  System.out.println("Not showing your feature");
-	       		message.setMessage("Java Spark Desactivado Feature Toggle");
+	       		message.setMessage("Java Spark Desactivado Feature Toggle Agile");
 	       	
 	       		}
 	       		client.flush();
