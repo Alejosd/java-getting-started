@@ -13,15 +13,9 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello", (req, res) -> "Hello Mundo");
-
-    get("/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hard Rock!");
-
-            return new ModelAndView(attributes, "index.ftl");
-        }, new FreeMarkerEngine());
-
+    get("/hello", "application/json", (request, response) -> {
+        return new Message("Hello Mundo Json");
+    }, new JsonTransformer());
    
   }
 
