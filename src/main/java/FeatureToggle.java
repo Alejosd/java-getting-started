@@ -23,7 +23,7 @@ public class FeatureToggle {
 
 		Message message = new Message("");
 
-		   LDClient client = new LDClient("sdk-c806c957-928a-4767-af2c-05649f002c8f");
+		   LDClient client = new LDClient("sdk-548dca6e-ae25-4a5f-861d-8f854a267956");
 	       LDUser user = new LDUser("alejosd5@gmail.com");
 	       		boolean showFeature = client.boolVariation("sd", user,false);
 
