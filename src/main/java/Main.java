@@ -3,13 +3,10 @@ import static spark.Spark.*;
 
 import static spark.Spark.get;
 
-import java.beans.FeatureDescriptor;
-import java.io.IOException;
-
-import org.eclipse.jetty.http.HttpStatus;
-
-import com.launchdarkly.client.LDClient;
-import com.launchdarkly.client.LDUser;
+import model.Message;
+import strategy.IMessage;
+import strategy.MessageActive;
+import util.JsonTransformer;
 
 public class Main {
 
@@ -18,17 +15,16 @@ public class Main {
 
    port(Integer.valueOf(System.getenv("PORT")));
   
-   Message message = new Message("hola mundo");
-   FeatureToggle featureToggle = new FeatureToggle(message);
+   Message text = new Message();
+   IMessage messageStrategy =  new MessageActive(text);
+   Notification notification = new Notification(messageStrategy);
 
     get("/", "application/json", (request, response) -> {
-        return new Message(featureToggle.featureToggle().getMessage());
+        return notification.StrategyNotification().getMessage();
         
         
     }, new JsonTransformer());
     
-   
-   
   }
 
 }
