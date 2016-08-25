@@ -12,8 +12,8 @@ public class Message {
 		this.message = message;
 	}
 
-	public Message(){
-		this.message= "";
+	public Message(String message){
+		this.message= message;
 	}
 
 }

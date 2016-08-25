@@ -16,12 +16,12 @@ public class Main {
 
    port(Integer.valueOf(System.getenv("PORT")));
   
-   Message text = new Message();
+   Message text = new Message("");
    IMessage messageStrategy =  new MessageFeatureToggle(text);
    Notification notification = new Notification(messageStrategy);
 
     get("/", "application/json", (request, response) -> {
-        return notification.StrategyNotification().getMessage();
+    	return new Message(notification.StrategyNotification().getMessage());
         
         
     }, new JsonTransformer());

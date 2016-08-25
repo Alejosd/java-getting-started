@@ -12,6 +12,14 @@ public class MessageFeatureToggle implements IMessage {
 	
 	private Message message;
 	
+	public Message getMessage() {
+		return message;
+	}
+
+	public void setMessage(Message message) {
+		this.message = message;
+	}
+
 	public MessageFeatureToggle(Message message){
 		this.message = message;
 	}
