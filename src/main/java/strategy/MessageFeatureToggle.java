@@ -41,17 +41,19 @@ public class MessageFeatureToggle implements IMessage {
 		   boolean showFeature = client.boolVariation("sd", user,false);
 		
 	       		if (showFeature) {
+	       		 
 	       		  System.out.println("Showing your feature");
 	       		  
-	       		  message.setMessage("Java Spark Activado Feature Toggle Agile");
+	       		  message.setMessage("Java Spark Activado Feature Toggle Agile"+valor);
 
 	       		} else {
 	       		
 	       			System.out.println("Not showing your feature");
 	       		
-	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile");
+	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile"+valor);
 
 	       		}
+	    
 	       		client.flush();
 	       		client.close();
 
