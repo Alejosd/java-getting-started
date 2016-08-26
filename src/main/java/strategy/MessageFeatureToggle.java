@@ -46,13 +46,13 @@ public class MessageFeatureToggle implements IMessage {
 	       		 
 	       		  System.out.println("Showing your feature");
 	       		  
-	       		  message.setMessage("Java Spark Activado Feature Toggle Agile.   "+"usuario"+usuario+",telefono:"+valor);
+	       		  message.setMessage("Java Spark Activado Feature Toggle Agile.   "+"usuario:  "+usuario+",telefono:"+valor);
 
 	       		} else {
 	       		
 	       			System.out.println("Not showing your feature");
 	       		
-	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile.   "+"usuario"+usuario+",telefono:"+valor);
+	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile.   "+"usuario:  "+usuario+",telefono:"+valor);
 
 	       		}
 	    
