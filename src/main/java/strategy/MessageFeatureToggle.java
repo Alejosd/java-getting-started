@@ -35,6 +35,7 @@ public class MessageFeatureToggle implements IMessage {
 		   String valor= "5";
 		   
 		   LDUser user = new LDUser.Builder("alejosd5@gmail.com")
+				   .email("alejosd5@gmail.com")
 				   .custom("telefono", valor)   
 				   .build();
 	       
