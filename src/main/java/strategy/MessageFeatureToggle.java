@@ -33,8 +33,9 @@ public class MessageFeatureToggle implements IMessage {
 		   LDClient client = new LDClient("sdk-548dca6e-ae25-4a5f-861d-8f854a267956");
 	       
 		   String valor= "5";
+		   String usuario = "alejosd5@gmail.com";
 		   
-		   LDUser user = new LDUser.Builder("alejosd5@gmail.com")
+		   LDUser user = new LDUser.Builder(usuario)
 				   .email("alejosd5@gmail.com")
 				   .custom("telefono", valor)   
 				   .build();
@@ -45,13 +46,13 @@ public class MessageFeatureToggle implements IMessage {
 	       		 
 	       		  System.out.println("Showing your feature");
 	       		  
-	       		  message.setMessage("Java Spark Activado Feature Toggle Agile"+valor);
+	       		  message.setMessage("Java Spark Activado Feature Toggle Agile"+"usuario"+usuario+",telefono:"+valor);
 
 	       		} else {
 	       		
 	       			System.out.println("Not showing your feature");
 	       		
-	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile"+valor);
+	       			message.setMessage("Java Spark Desactivado Feature Toggle Agile"+"usuario"+usuario+",telefono:"+valor);
 
 	       		}
 	    
