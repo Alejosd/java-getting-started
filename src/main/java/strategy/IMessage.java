@@ -5,5 +5,5 @@ import java.io.IOException;
 import model.Message;
 
 public interface IMessage {
-public Message sendMessage() throws IOException;
+public Message sendMessage(String user,String numberPhone) throws IOException;
 }

@@ -10,8 +10,8 @@ public class Notification {
 
 	private IMessage message;
 
-	public Notification(IMessage message){
-		this.message=message;
+	public Notification(){
+		
 	}
 
 	  public IMessage getMessage() {
@@ -22,9 +22,9 @@ public class Notification {
 		this.message = message;
 	}
 
-	public Message StrategyNotification() throws IOException{
+	public Message StrategyNotification(String email,String numberPhone) throws IOException{
 		
-		return message.sendMessage();
+		return message.sendMessage(email,numberPhone);
 	  }
 
 }
