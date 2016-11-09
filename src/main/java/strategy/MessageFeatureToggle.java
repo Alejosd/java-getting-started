@@ -57,7 +57,7 @@ public class MessageFeatureToggle implements IMessage {
 
 		String nameFlag = "sd";
 
-		LDClient client = new LDClient("sdk-548dca6e-ae25-4a5f-861d-8f854a267956");
+		LDClient client = new LDClient("sdk-5073596d-fc3d-45e3-9a69-2f49615be793");
 
 		LDUser userFeatureToggle = new LDUser.Builder(user)
 				.custom("telefono", numberPhone)   
